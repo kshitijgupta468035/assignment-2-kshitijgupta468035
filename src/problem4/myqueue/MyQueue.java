@@ -14,31 +14,43 @@ public class MyQueue<E> implements MyQueueADT<E> {
     private Node<E> rear;
     private int size = 0;
 
-
     @Override
-    public void enqueue(Object data) {
-
+    public void enqueue(E data) {
+        Node<E> node = new Node<>(data);
+        if (front == null) {
+            node.next = null;
+            front = node;
+            rear = node;
+        } else {
+            node.setNext(rear.getNext());
+            rear.setNext(node);
+            rear = node;
+        }
+        size++;
     }
 
     @Override
     public E dequeue() {
-        return null;
+        E data = front.getData();
+        front = front.getNext();
+        size--;
+        return data;
     }
 
     @Override
     public E peek() {
-        return null;
+        E data = front.getData();
+        return data;
     }
-
 
     @Override
     public boolean isEmpty() {
-        return false;
+        return size == 0;
     }
 
     @Override
     public int getSize() {
-        return 0;
+        return size;
     }
 
     private static class Node<E> {
