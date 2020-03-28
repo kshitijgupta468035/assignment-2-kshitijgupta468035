@@ -35,5 +35,16 @@ public class Student {
         return rollNumber + "." + name;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        boolean flag = false;
+        Student student = (Student) o;
+        if (rollNumber > student.rollNumber) {
+            return true;
+        }
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        return flag;
+    }
 
 }
