@@ -19,4 +19,8 @@ public class MyBinarySearchTree<E> implements MyBinarySearchTreeADT<E> {
         return false;
     }
 
+    public TreeNode<E> getRoot() {
+        return root;
+    }
+
 }
