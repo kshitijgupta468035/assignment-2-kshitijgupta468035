@@ -12,18 +12,18 @@ import problem1.mybst.MyBinarySearchTree;
 public class MyMain {
     public static void main(String[] args) {
         MyBinarySearchTree<Integer> tree = new MyBinarySearchTree<>();
-        tree.add(100);
-        tree.add(50);
-        tree.add(200);
-        tree.add(25);
-        tree.add(75);
-        tree.add(150);
-        tree.add(300);
-        tree.add(40);
-        tree.add(60);
-        tree.add(110);
+        tree.add(120);
+        tree.add(70);
+        tree.add(210);
+        tree.add(35);
+        tree.add(55);
         tree.add(250);
-        tree.add(275);
+        tree.add(400);
+        tree.add(20);
+        tree.add(30);
+        tree.add(130);
+        tree.add(150);
+        tree.add(375);
 
         tree.print();
 
