@@ -16,26 +16,51 @@ public class MyCircularQueue<E> implements CircularQueue<E> {
 
     @Override
     public void enqueue(E data) {
-
+        Node node = new Node(data);
+        if (isEmpty()) {
+            rear = node;
+            size++;
+            node.setNext(node);
+        } else {
+            node.setNext(rear.getNext());
+            rear.setNext(node);
+            rear = node;
+            size++;
+        }
     }
 
     @Override
     public E dequeue() {
-        return null;
+        Node<E> response = null;
+        E data = null;
+        if (!isEmpty()) {
+
+            response = rear.getNext();
+            data = response.getData();
+            size--;
+            if (rear.getNext() == rear) {
+                rear = null;
+            } else {
+                rear.setNext(response.getNext());
+            }
+        }
+        return data;
     }
 
     @Override
     public E peek() {
-        return null;
+        Node<E> node = rear.getNext();
+        E data = node.getData();
+        return data;
     }
 
     @Override
     public boolean isEmpty() {
-        return false;
+        return size == 0;
     }
 
     @Override
     public int getSize() {
-        return 0;
+        return size;
     }
 }
