@@ -43,6 +43,18 @@ public class MyPriorityQueue<E> implements QueueADT<E> {
     }
 
     @Override
+    public void add(E data) {
+        if (size == 0) {
+            Node<E> node = new Node<E>(data, null);
+            front = node;
+            rear = node;
+            size++;
+        } else {
+            sortedAdd(data);
+        }
+    }
+
+    @Override
     public E remove() {
         E data = front.getData();
         front = front.getNext();
@@ -54,5 +66,18 @@ public class MyPriorityQueue<E> implements QueueADT<E> {
     public E peek() {
         E data = front.getData();
         return data;
+    }
+
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("[");
+        Node<E> temp = front;
+        for (int i = 0; i < size && temp != null; i++) {
+            E data = temp.getData();
+            sb.append(data);
+            sb.append((i < size - 1) ? ",\n" : "");
+            temp = temp.getNext();
+        }
+        sb.append("]");
+        return sb.toString();
     }
 }
