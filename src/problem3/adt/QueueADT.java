@@ -5,4 +5,7 @@ public interface QueueADT<E> {
 
     void add(E data);
 
+    //remove the element at front
+
+    E remove();
 }
