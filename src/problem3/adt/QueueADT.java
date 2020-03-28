@@ -8,4 +8,9 @@ public interface QueueADT<E> {
     //remove the element at front
 
     E remove();
+
+    //extract the element without removing
+
+    E peek();
+
 }
