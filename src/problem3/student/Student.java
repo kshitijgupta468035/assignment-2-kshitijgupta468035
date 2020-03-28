@@ -1,6 +1,5 @@
 package problem3.student;
 
-
 import java.util.Objects;
 
 public class Student {

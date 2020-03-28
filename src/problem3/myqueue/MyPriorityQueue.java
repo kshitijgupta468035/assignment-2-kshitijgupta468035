@@ -42,6 +42,7 @@ public class MyPriorityQueue<E> implements QueueADT<E> {
         size++;
     }
 
+
     @Override
     public void add(E data) {
         if (size == 0) {
