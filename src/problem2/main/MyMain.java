@@ -20,6 +20,10 @@ public class MyMain {
         tree.add(12);
         tree.add(13);
         tree.add(5);
+
+        System.out.println("Traverse the tree in PreOrder :");
+        traversePreOrder(tree.getRoot());
+
     }
 
     public static void traversePreOrder(TreeNode<Integer> currentNode) {
