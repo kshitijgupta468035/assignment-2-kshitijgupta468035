@@ -40,4 +40,13 @@ public class Student {
     public void setBackLog(int backLog) {
         this.backLog = backLog;
     }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "rollNumber=" + rollNumber +
+                ", name='" + name + '\'' +
+                ", backLog=" + backLog +
+                '}';
+    }
 }
