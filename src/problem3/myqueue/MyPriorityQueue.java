@@ -43,17 +43,16 @@ public class MyPriorityQueue<E> implements QueueADT<E> {
     }
 
     @Override
-    public void add(E data) {
-
-    }
-
-    @Override
     public E remove() {
-        return null;
+        E data = front.getData();
+        front = front.getNext();
+        size--;
+        return data;
     }
 
     @Override
     public E peek() {
-        return null;
+        E data = front.getData();
+        return data;
     }
 }
