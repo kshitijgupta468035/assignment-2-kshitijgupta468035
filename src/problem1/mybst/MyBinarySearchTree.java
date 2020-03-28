@@ -50,4 +50,9 @@ public class MyBinarySearchTree<E> implements MyBinarySearchTreeADT<E> {
         printLeftChild(node.getRightChild(), level + 1);
     }
 
+    public void print() {
+        printLeftChild(root, 1);
+        System.out.println();
+    }
+
 }
