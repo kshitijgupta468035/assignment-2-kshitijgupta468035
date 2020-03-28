@@ -23,7 +23,9 @@ public class MyMain {
 
         System.out.println("Traverse the tree in PreOrder :");
         traversePreOrder(tree.getRoot());
-
+        System.out.println();
+        System.out.println("Traverse the tree in PostOrder :");
+        traversePostOrder(tree.getRoot());
     }
 
     public static void traversePreOrder(TreeNode<Integer> currentNode) {
