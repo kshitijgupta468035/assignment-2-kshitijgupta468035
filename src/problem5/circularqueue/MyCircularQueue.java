@@ -7,9 +7,13 @@
 package problem5.circularqueue;
 
 import problem5.adt.CircularQueue;
+import problem5.node.Node;
 
 //to implement circular queue
 public class MyCircularQueue<E> implements CircularQueue<E> {
+    private Node<E> rear;
+    private int size;
+
     @Override
     public void enqueue(E data) {
 
