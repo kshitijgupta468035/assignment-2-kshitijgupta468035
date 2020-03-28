@@ -9,4 +9,7 @@ public class Student {
         this.name = name;
     }
 
+    public Student(int rollNumber) {
+        this.rollNumber = rollNumber;
+    }
 }
