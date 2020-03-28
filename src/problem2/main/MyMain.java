@@ -13,5 +13,13 @@ import problem1.mybst.MyBinarySearchTree;
 public class MyMain {
     public static void main(String[] args) {
         MyBinarySearchTree<Integer> tree = new MyBinarySearchTree<>();
+
+        tree.add(10);
+        tree.add(3);
+        tree.add(12);
+        tree.add(13);
+        tree.add(5);
+
+
     }
 }
