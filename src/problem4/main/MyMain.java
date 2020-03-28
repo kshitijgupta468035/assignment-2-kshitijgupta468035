@@ -7,6 +7,7 @@
 package problem4.main;
 
 import problem1.mybst.MyBinarySearchTree;
+import problem1.node.TreeNode;
 import problem4.myqueue.MyQueue;
 
 import java.util.Scanner;
@@ -28,6 +29,26 @@ public class MyMain {
 
         MyQueue<Integer> myQueue = new MyQueue<>();
         System.out.println("Nodes After traversing in Pre Order :");
+        MyQueue<Integer> myQueue1 = traversePreOrder(myBinarySearchTree.getRoot(), myQueue);
+        System.out.println();
+        System.out.println("Queue of Pre Order Successor :");
+        MyQueue<Integer> myQueue2 = getQueuePreOrderSuccessor(myQueue1);
+        System.out.println(myQueue2);
+    }
 
+
+    public static MyQueue traversePreOrder(TreeNode<Integer> currentNode, MyQueue<Integer> myQueue) {
+        if (currentNode != null) {
+            myQueue.enqueue(currentNode.getData());
+            System.out.print(currentNode.getData() + " ");
+            traversePreOrder(currentNode.getLeftChild(), myQueue);
+            traversePreOrder(currentNode.getRightChild(), myQueue);
+        }
+        return myQueue;
+    }
+
+    public static MyQueue getQueuePreOrderSuccessor(MyQueue myQueue) {
+        myQueue.dequeue();
+        return myQueue;
     }
 }
