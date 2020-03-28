@@ -16,6 +16,9 @@ public class Node<E> {
         this.next = next;
     }
 
+    public <E> Node(E data) {
+    }
+
     public E getData() {
         return data;
     }
