@@ -1,4 +1,5 @@
 package problem1.mybst;
 
-public interface MyBinarySearchTreeADT {
+public interface MyBinarySearchTreeADT<E> {
+
 }
