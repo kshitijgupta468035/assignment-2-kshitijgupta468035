@@ -20,6 +20,6 @@ public class MyMain {
         myPriorityQueue.add(new Student(4, "don"));
         myPriorityQueue.add(new Student(3, "mohan"));
 
-
+        System.out.println(myPriorityQueue);
     }
 }
