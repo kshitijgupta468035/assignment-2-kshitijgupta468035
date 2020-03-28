@@ -27,6 +27,6 @@ public class MyMain {
 
         tree.print();
 
-
+        System.out.println("Number of nodes who doesn't have a left Child :" + tree.numberOfLeftChild);
     }
 }
