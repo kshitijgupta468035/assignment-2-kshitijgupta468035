@@ -7,5 +7,32 @@
 package problem4.myqueue;
 // to create queue to store pre - order successor
 
-public class MyQueue {
+import problem4.adt.MyQueueADT;
+
+public class MyQueue<E> implements MyQueueADT {
+
+    @Override
+    public void enqueue(Object data) {
+
+    }
+
+    @Override
+    public Object dequeue() {
+        return null;
+    }
+
+    @Override
+    public Object peek() {
+        return null;
+    }
+
+    @Override
+    public boolean isEmpty() {
+        return false;
+    }
+
+    @Override
+    public int getSize() {
+        return 0;
+    }
 }
